@@ -2,22 +2,18 @@
 Repositorio de conocimiento del equipo QA orientado a documentar **cómo trabajamos**, nuestras **prácticas**, **herramientas** y el **entendimiento del negocio de Interbanking**.
  
 Este repositorio funciona 
-
-
-
-
-
-
-como una **wiki viva** y como una base de conocimiento optimizada para ser utilizada tanto por personas como por asistentes de IA (como Amazon Q o Copilot).
+fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
  
 ---
+
+Machi de la pueblo
  
 
  
-- 📚 Documentación clara y accesible
+- 📚 DocDoc umentación clara y accesible
 - 🧠 Transferencia de conocimiento entre equipos
 - 🚀 Onboarding más rápido de nuevos QA
-- ✅ Estandarización de procesos de testing
+
 
 
 
