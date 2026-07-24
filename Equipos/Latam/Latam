@@ -1,0 +1,29 @@
+Para ver los datos Resumen de Saldos bancarios hay que consultar la tabla account_summary y filtrar por CLOSING
+SELECT t.* FROM public.account_summary AS t
+WHERE (company_id::uuid = '650e8400-e29b-41d4-a716-446655440007'::uuid) AND (summary_type = 'CLOSING')
+
+ 
+Para ver los datos que carga Consolidados de saldos hay que consultar la tabla account_summary y filtrar por OPENING
+SELECT t.* FROM public.account_summary AS t
+WHERE (company_id::uuid = '650e8400-e29b-41d4-a716-446655440007'::uuid) AND (summary_type = 'OPENING')
+
+
+Para ver los datos que carga en la pantalla Movimientos hay que consultar la tabla account_activity
+SELECT aa.* FROM public.account_activity AS aa
+WHERE organization_id::uuid = '550e8400-e29b-41d4-a716-446655440007
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+usuarios para QA
+
+Maria de los Angeles Castaño
+mcastano_meli
+Kurama2405!
+
+Ambar Monge
+mcastano_personal
+Pomelo05!
+
+-------------------------------------------------------------------------------------------------------------------------
+
