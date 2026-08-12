@@ -1,0 +1,33 @@
+
+# Esquema de Firmas (EDF)
+
+1. ¿Qué es un esquema de firmas?
+El esquema de firmas refleja a los colaboradores que pueden autorizar las transferencias respetando la combinación de colaboradores, cuentas, montos y límites que tienen en el banco. Un esquema está compuesto por:
+Un grupo de firmantes (hasta 3 firmas).
+Una o más cuentas asociadas.
+El esquema en sí requiere la autorización de los operadores del cliente. Sin embargo, cada cuenta (o tope por cuenta) debe ser aprobada, rechazada, inhabilitada o puesta en trámite por el banco.
+ 
+2. ¿Cuándo se usa?
+Se utiliza al autorizar las transferencias, en el 2do paso del flujo: 1° Confección → 2° Autorización → 3° Envío.
+ 
+3. Arquitectura técnica
+Nota : La existencia de tener el back y el dom-back es porque inicialmente el dom-back debería conectarse a una base de datos en MongoDB, pero aún no tiene la capacidad y lógica. Usa el back para traer data de la base de datos relacional (SIB). Funcionará así hasta que se haga el desacople.
+ 
+## Recursos técnicos
+Figma
+https://www.figma.com/design/usdXmtB9r5EEukgBbXAOR4/Esquema-de-firmas---ready-for-dev?node-id=5535-29309&p=f&t=Tg7ncmxFqmHrJ9AW-0Conecta tu cuenta de 
+Swagger BACK →           EDF BACK
+Swagger DOM BACK → EDF DOM BACK
+Swagger BFF →              BFF EDF
+ 
+
+## Topes 
+
+| Case                                                                       | Campo_Response                | Tabla_BD              | Columna_BD       |
+| :--------- | :--------- | :--------- | :--------- |
+|  Tope diario del EDF                                                       | topeDia                       | QASIB.ESQUEMAS_FIRMAS | ESQ_FIRM_MON_DIA |
+|  Tope diario de la cuenta configurado en el EDF                            | topeMontoTransaccion          | QASIB.TOPE_CTA        | TOPE_MON_TRX     |
+|  Tope por día de la cuenta configurado Fuera del EDF                       | topeMontoDiaCtaDebito         | QASIB.CTA_PARTE       | CTAP_TOPE_DIA    |
+|  Tope por Transferencia de la cuenta fuera del EDF                         | topeMontoTransaccionCtaDebito | QASIB.CTA_PARTE       | CTAP_TOPE_TRX    |
+|  Restricciones adicionales Topes por tipo de transferencia por Día         | topeMontoDiaTipoTef           | QASIB.TOPE_TEF        | TOPE_TEF_MON_DIA |
+|  Restricciones adicionales Topes por tipo de transferencia por Transaccion | topeMontoTransaccionTipoTef   | QASIB.TOPE_TEF        | TOPE_TEF_MON_TRX |
