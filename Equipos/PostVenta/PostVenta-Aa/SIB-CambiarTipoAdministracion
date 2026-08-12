@@ -1,8 +1,28 @@
 # Cambiar tipo de Administracion en SIB
 
-
-Hasta ahora
 Solo en nivel de Vision Cliente
+
+Un operador "Administracion General" puede cambiar el tipo de administracion conjunta a individual o de individual a conjunta. 
+
+Cuando pasa de Conjunta a individual puede tener autorizaciones pendientes. 
+
+Con **PENDIENTES** > Se debera mostrar un modal diciendo "XXXXXXXXXXX", ademas se enviara un mensaje a campanita de plataforma diciento que tiene pendientes de autorizacion. 
+Ademas se enviaran otra notificacion a campanita/email notificando que se inicio el cambio.
+
+Sin **PENDIENTES** > No se mostrara modal en SIB, y solo enviara notificaciones campanita/email notificando que se inicio el cambio.
+
+Cuando se produce este cambio se guardara en la tabla AUDITORIA_CAMBIO_ESQUEMA_AUTH
+
+
+
+
+
+AUDITORIA_CAMBIO_ESQUEMA_AUTH
+
+
+**Tablas**
+qasib.pendientes
+
 
 Se creara una tabla de auditoria
 
