@@ -2,23 +2,42 @@
 # Esquema de Firmas (EDF)
 
 1. ¿Qué es un esquema de firmas?
+
 El esquema de firmas refleja a los colaboradores que pueden autorizar las transferencias respetando la combinación de colaboradores, cuentas, montos y límites que tienen en el banco. Un esquema está compuesto por:
 Un grupo de firmantes (hasta 3 firmas).
 Una o más cuentas asociadas.
 El esquema en sí requiere la autorización de los operadores del cliente. Sin embargo, cada cuenta (o tope por cuenta) debe ser aprobada, rechazada, inhabilitada o puesta en trámite por el banco.
  
 2. ¿Cuándo se usa?
+
 Se utiliza al autorizar las transferencias, en el 2do paso del flujo: 1° Confección → 2° Autorización → 3° Envío.
  
 3. Arquitectura técnica
+
 Nota : La existencia de tener el back y el dom-back es porque inicialmente el dom-back debería conectarse a una base de datos en MongoDB, pero aún no tiene la capacidad y lógica. Usa el back para traer data de la base de datos relacional (SIB). Funcionará así hasta que se haga el desacople.
  
 ## Recursos técnicos
 Figma
-https://www.figma.com/design/usdXmtB9r5EEukgBbXAOR4/Esquema-de-firmas---ready-for-dev?node-id=5535-29309&p=f&t=Tg7ncmxFqmHrJ9AW-0Conecta tu cuenta de 
-Swagger BACK →           EDF BACK
-Swagger DOM BACK → EDF DOM BACK
-Swagger BFF →              BFF EDF
+https://www.figma.com/design/usdXmtB9r5EEukgBbXAOR4/Esquema-de-firmas---ready-for-dev?node-id=5535-29309&p=f&t=Tg7ncmxFqmHrJ9AW-0Conecta 
+
+
+**Swagger BACK** →  [EDF BACK](https://esquemadefirmas-back-qaesquemadefirmas-back.apps.qa.interbanking.com.ar/doc/swagger-ui/#/Signatures%20Schema/get_api_v1_signatures_schema__subscriberCode_)
+
+
+**Swagger DOM BACK** → [EDF DOM BACK](https://efirmas-dom-back-qaefirmas-dom-back.apps.qa.interbanking.com.ar/doc/swagger-ui/)
+
+
+**Swagger BFF** → [BFF EDF](https://esquemadefirmas-bff-qaesquemadefirmas.apps.qa.interbanking.com.ar/doc/swagger-ui)
+ 
+## FILTROS JIRA:
+
+TEST AUTOMATIZADOS - [Test Case Esquema de Firmas - Regresión] Navegador de incidencias - INTERbanking
+
+TEST NO AUTOMATIZADOS - [Test Case Esquema de Firmas - Regresión] Navegador de incidencias - INTERbanking
+
+TEST NO AUTOMATIZABLES - [Test Case Esquema de Firmas - Regresión No Automatizable] Navegador de incidencias - INTERbanking
+
+TODOS LOS TEST EDF- [Test Case Esquema de Firmas - TOTAL] Navegador de incidencias - INTERbanking
  
 
 ## Topes 
